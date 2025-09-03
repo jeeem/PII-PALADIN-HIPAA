@@ -967,10 +967,19 @@ class AparaviDTC {
   }
 }
 
-// CommonJS export for Node.js environments
-module.exports = AparaviDTC;
-
-// Browser global fallback
-if (typeof window !== 'undefined') {
+// Universal export/import handling
+if (typeof module !== 'undefined' && module.exports) {
+  // Node.js CommonJS
+  module.exports = AparaviDTC;
+} else if (typeof define === 'function' && define.amd) {
+  // AMD (RequireJS)
+  define([], function() { return AparaviDTC; });
+} else if (typeof window !== 'undefined') {
+  // Browser global
   window.AparaviDTC = AparaviDTC;
+} else if (typeof global !== 'undefined') {
+  // Node.js global
+  global.AparaviDTC = AparaviDTC;
 }
+
+
