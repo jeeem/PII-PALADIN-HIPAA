@@ -2,9 +2,17 @@
   "name": "pii-paladin-hipaa",
   "version": "1.0.0",
   "description": "🏥 HIPAA-compliant PII anonymization & data protection for healthcare data using Aparavi DTC AI",
-  "main": "aparavi-dtc-universal.esm.mjs",
+  "main": "aparavi-dtc-universal.cjs",
+  "module": "aparavi-dtc-universal.esm.mjs",
   "type": "module",
   "types": "aparavi-dtc-universal.d.ts",
+  "exports": {
+    ".": {
+      "import": "./aparavi-dtc-universal.esm.mjs",
+      "require": "./aparavi-dtc-universal.cjs",
+      "types": "./aparavi-dtc-universal.d.ts"
+    }
+  },
   "scripts": {
     "test": "node -e \"console.log('PII PALADIN HIPAA - Ready for use!')\""
   },
@@ -73,6 +81,7 @@
   ],
   "files": [
     "aparavi-dtc-universal.esm.mjs",
+    "aparavi-dtc-universal.cjs",
     "aparavi-dtc-universal.d.ts",
     "README.md"
   ]

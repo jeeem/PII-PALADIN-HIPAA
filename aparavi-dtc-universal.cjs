@@ -967,20 +967,10 @@ class AparaviDTC {
   }
 }
 
-// ES Module export for modern environments (React, Node.js ES modules)
-export default AparaviDTC;
+// CommonJS export for Node.js environments
+module.exports = AparaviDTC;
 
-// Universal export/import handling for backward compatibility
-if (typeof module !== 'undefined' && module.exports) {
-  // Node.js CommonJS
-  module.exports = AparaviDTC;
-} else if (typeof define === 'function' && define.amd) {
-  // AMD (RequireJS)
-  define([], function() { return AparaviDTC; });
-} else if (typeof window !== 'undefined') {
-  // Browser global
+// Browser global fallback
+if (typeof window !== 'undefined') {
   window.AparaviDTC = AparaviDTC;
-} else if (typeof global !== 'undefined') {
-  // Node.js global
-  global.AparaviDTC = AparaviDTC;
 }
