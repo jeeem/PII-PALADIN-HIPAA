@@ -1,0 +1,79 @@
+{
+  "name": "pii-paladin-hipaa",
+  "version": "1.0.0",
+  "description": "🏥 HIPAA-compliant PII anonymization & data protection for healthcare data using Aparavi DTC AI",
+  "main": "aparavi-dtc-universal.esm.mjs",
+  "type": "module",
+  "types": "aparavi-dtc-universal.d.ts",
+  "scripts": {
+    "test": "node -e \"console.log('PII PALADIN HIPAA - Ready for use!')\""
+  },
+  "keywords": [
+    "pii",
+    "anonymization",
+    "anonymize",
+    "privacy",
+    "hipaa",
+    "healthcare",
+    "medical",
+    "compliance",
+    "phi",
+    "protected-health-information",
+    "aparavi",
+    "dtc",
+    "paladin",
+    "data-protection",
+    "data-privacy",
+    "personal-data",
+    "ner",
+    "machine-learning",
+    "ai",
+    "artificial-intelligence",
+    "data-masking",
+    "data-scrubbing",
+    "data-sanitization",
+    "privacy-tools",
+    "compliance-tools",
+    "enterprise",
+    "security",
+    "data-governance",
+    "healthcare-compliance",
+    "medical-privacy",
+    "patient-data"
+  ],
+  "author": "jeeem",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeeem/PII-PALADIN-HIPAA.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jeeem/PII-PALADIN-HIPAA/issues"
+  },
+  "homepage": "https://github.com/jeeem/PII-PALADIN-HIPAA#readme",
+  "documentation": "https://github.com/jeeem/PII-PALADIN-HIPAA#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/jeeem/PII-PALADIN-HIPAA"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "files": [
+    "aparavi-dtc-universal.esm.mjs",
+    "aparavi-dtc-universal.d.ts",
+    "README.md"
+  ]
+}
