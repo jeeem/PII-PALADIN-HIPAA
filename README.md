@@ -13,12 +13,11 @@ This is a **companion application** to [PII PALADIN](https://www.npmjs.com/packa
 - ⏱️ **Processing time**: Each token provides ~1 second of GPU processing time
 - 🌍 **Global PII detection**: Supports 60+ countries with native language recognition
 
-## 📦 **File Formats & Compatibility**
+## 📦 **Universal Compatibility**
 
-This package provides multiple file formats for maximum compatibility:
+This package provides a single universal file that works in all environments:
 
-- **`aparavi-dtc-universal.esm.mjs`** - ES Module (React, modern Node.js)
-- **`aparavi-dtc-universal.cjs`** - CommonJS (Node.js, browser with bundler)
+- **`aparavi-dtc-universal.js`** - Universal file (ES Module, CommonJS, Browser)
 - **`aparavi-dtc-universal.d.ts`** - TypeScript declarations
 
 ## 🆚 **How This Fits with PII PALADIN**
@@ -52,12 +51,11 @@ import AparaviDTC from 'pii-paladin-hipaa';
 const AparaviDTC = require('pii-paladin-hipaa');
 
 // Browser (global variable)
-<script src="aparavi-dtc-universal.cjs"></script>
+<script src="aparavi-dtc-universal.js"></script>
 // Then use: window.AparaviDTC
 
-// Direct file imports
-import AparaviDTC from './aparavi-dtc-universal.esm.mjs';  // ES Module
-const AparaviDTC = require('./aparavi-dtc-universal.cjs');  // CommonJS
+// Direct file import
+import AparaviDTC from './aparavi-dtc-universal.js';  // Universal file
 ```
 
 ### 3. Start Using

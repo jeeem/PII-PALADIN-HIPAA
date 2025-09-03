@@ -987,5 +987,4 @@ if (typeof exports !== 'undefined') {
   exports.AparaviDTC = AparaviDTC;
 }
 
-// ES Module export for modern environments (React, Node.js ES modules)
-export default AparaviDTC;
+
