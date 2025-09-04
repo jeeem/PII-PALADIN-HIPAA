@@ -1,6 +1,6 @@
 {
   "name": "pii-paladin-hipaa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🏥 HIPAA-compliant PII anonymization & data protection for healthcare data using Aparavi DTC AI",
   "main": "aparavi-dtc-universal.js",
   "types": "aparavi-dtc-universal.d.ts",
