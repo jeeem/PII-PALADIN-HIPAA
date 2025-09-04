@@ -21,8 +21,8 @@ const PIPELINE_CONFIG = {
                 },
                 "ui": {
                     "position": {
-                        "x": -80,
-                        "y": 200
+                        "x": 60,
+                        "y": 220
                     },
                     "measured": {
                         "width": 140,
@@ -34,61 +34,6 @@ const PIPELINE_CONFIG = {
                     },
                     "formDataValid": true
                 }
-            },
-            {
-                "id": "anonymize_text_1",
-                "provider": "anonymize_text",
-                "config": {
-                    "profile": "glinerMergedLarge",
-                    "glinerMergedLarge": {
-                        "anonymizeChar": "█"
-                    }
-                },
-                "ui": {
-                    "position": {
-                        "x": 320,
-                        "y": 280
-                    },
-                    "measured": {
-                        "width": 140,
-                        "height": 90
-                    },
-                    "data": {
-                        "class": "text",
-                        "type": "default"
-                    },
-                    "formDataValid": true,
-                    "edges": [
-                        {
-                            "selectable": true,
-                            "deletable": true,
-                            "id": "xy-edge__webhook_1source-text-0-anonymize_text_1target-text-1",
-                            "source": "webhook_1",
-                            "target": "anonymize_text_1",
-                            "sourceHandle": "source-text-0",
-                            "targetHandle": "target-text-1"
-                        },
-                        {
-                            "selectable": true,
-                            "deletable": true,
-                            "id": "xy-edge__classify_1source-classifications-0-anonymize_text_1target-classifications-0",
-                            "source": "classify_1",
-                            "target": "anonymize_text_1",
-                            "sourceHandle": "source-classifications-0",
-                            "targetHandle": "target-classifications-0"
-                        }
-                    ]
-                },
-                "input": [
-                    {
-                        "lane": "text",
-                        "from": "webhook_1"
-                    },
-                    {
-                        "lane": "classifications",
-                        "from": "classify_1"
-                    }
-                ]
             },
             {
                 "id": "classify_1",
@@ -560,7 +505,7 @@ const PIPELINE_CONFIG = {
                 },
                 "ui": {
                     "position": {
-                        "x": 140,
+                        "x": 260,
                         "y": 160
                     },
                     "measured": {
@@ -592,6 +537,61 @@ const PIPELINE_CONFIG = {
                 ]
             },
             {
+                "id": "anonymize_text_1",
+                "provider": "anonymize_text",
+                "config": {
+                    "profile": "glinerMergedLarge",
+                    "glinerMergedLarge": {
+                        "anonymizeChar": "█"
+                    }
+                },
+                "ui": {
+                    "position": {
+                        "x": 460,
+                        "y": 260
+                    },
+                    "measured": {
+                        "width": 140,
+                        "height": 90
+                    },
+                    "data": {
+                        "class": "text",
+                        "type": "default"
+                    },
+                    "formDataValid": true,
+                    "edges": [
+                        {
+                            "selectable": true,
+                            "deletable": true,
+                            "id": "xy-edge__classify_1source-classifications-0-anonymize_text_1target-classifications-0",
+                            "source": "classify_1",
+                            "target": "anonymize_text_1",
+                            "sourceHandle": "source-classifications-0",
+                            "targetHandle": "target-classifications-0"
+                        },
+                        {
+                            "selectable": true,
+                            "deletable": true,
+                            "id": "xy-edge__webhook_1source-text-0-anonymize_text_1target-text-1",
+                            "source": "webhook_1",
+                            "target": "anonymize_text_1",
+                            "sourceHandle": "source-text-0",
+                            "targetHandle": "target-text-1"
+                        }
+                    ]
+                },
+                "input": [
+                    {
+                        "lane": "classifications",
+                        "from": "classify_1"
+                    },
+                    {
+                        "lane": "text",
+                        "from": "webhook_1"
+                    }
+                ]
+            },
+            {
                 "id": "response_1",
                 "provider": "response",
                 "config": {
@@ -599,8 +599,8 @@ const PIPELINE_CONFIG = {
                 },
                 "ui": {
                     "position": {
-                        "x": 520,
-                        "y": 140
+                        "x": 640,
+                        "y": 120
                     },
                     "measured": {
                         "width": 140,
@@ -632,7 +632,7 @@ const PIPELINE_CONFIG = {
             }
         ],
         "source": "webhook_1",
-        "project_id": "4298769a-d8ed-40fc-ac6c-82b96c9ed3c4"
+        "project_id": "eb23d792-1d8d-4a95-9582-03feac99aa41"
     }
 }
 
